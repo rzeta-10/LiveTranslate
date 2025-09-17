@@ -37,7 +37,6 @@ const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
 // Language list removed, always translate to English
 
-console.log('Gemini API Key:', process.env.REACT_APP_GEMINI_API_KEY);
 
 export const translateText = async (
   inputText: string,
