@@ -17,7 +17,12 @@ export class GeminiTranslationWebSocketClient {
       this.callbacks = callbacks;
       return;
     }
-    this.ws = new WebSocket('ws://localhost:8080');
+    // Use Render backend in production, localhost in development
+    const wsUrl =
+      window.location.hostname === 'localhost'
+        ? 'ws://localhost:8080'
+        : 'wss://livetranslate-egs7.onrender.com';
+    this.ws = new WebSocket(wsUrl);
     this.callbacks = callbacks;
     this.ws.onopen = () => {
       // Ready to send text
