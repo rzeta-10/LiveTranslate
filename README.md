@@ -1,4 +1,4 @@
-# AI Translator — Gemini-Powered Translation with Voice
+# LiveTranslate — Gemini-Powered Real-Time Translation
 
 A modern, real-time translation app built with **React**, powered by **Google's Gemini AI**. 
 Includes both **voice input** (speech-to-text) and **voice output** (text-to-speech), with a sleek UI built using Tailwind CSS.
@@ -23,7 +23,7 @@ Includes both **voice input** (speech-to-text) and **voice output** (text-to-spe
 1. Clone the repository:
 ```bash
    git clone 
-   cd ai-gemini-translator
+   cd livetranslate
 ```
 
 2. Install dependencies:
@@ -67,8 +67,3 @@ Make sure your browser supports these APIs for full functionality.
 - Tailwind CSS
 - Google Gemini AI
 - Web Speech API
-# MeetLingoLive
-# LiveTranslate
-# LiveTranslate
-# LiveTranslate
-# LiveTranslate
