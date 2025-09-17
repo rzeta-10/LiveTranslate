@@ -5,7 +5,8 @@ const WebSocket = require('ws');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
 
-const wss = new WebSocket.Server({ port: 8080 });
+const port = process.env.PORT || 8080;
+const wss = new WebSocket.Server({ port });
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
@@ -29,4 +30,4 @@ wss.on('connection', (ws) => {
   });
 });
 
-console.log('WebSocket proxy server running on ws://localhost:8080');
+console.log(`WebSocket proxy server running on ws://localhost:${port}`);
